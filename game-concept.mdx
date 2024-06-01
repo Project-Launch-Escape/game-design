@@ -1,0 +1,114 @@
+# Game design concept
+
+Based on the following template: [Game Concept Document Template.pdf](https://drive.google.com/file/d/1-yiF2Pq-OgJaTXsMAQbIckoDzGINz26O/view?pli=1)
+
+## High level concept
+
+### Working title
+
+Project Launch Escape
+
+### Concept statement
+
+"Project Launch Escape is a space flight simulation game heavily focused on gathering resources and designing, building, and maintaining orbital and ground stations. Progress all the way through to interstellar exploration by creating automated bases across various unique celestial bodies."
+
+### Genres
+
+Sandbox, Simulation, Strategy
+
+### Target audience
+
+- Space enthusiasts, strategy and simulation game fans
+- Designed for ages 12 and up
+- Players who enjoy building, resource management, automation
+
+### Unique selling points
+
+- A diverse range of celestial bodies with unique challenges and resources, not mimicking the real solar system
+- Stylized art style to reduce asset and rendering complexity while remaining visually appealing
+- Endearing animal-based robots as the "astronauts" and workers
+- Physics based on real life but adapted in a way to promote planning over trial-and-error 
+
+## Product design
+
+### Player experience and game POV
+
+- Players assume the role of managing an industrial operation, designing and constructing various types of vessels and stations.
+- The fantasy is to build and manage a thriving space-fairing "civilization".
+- Players will feel a sense of achievement through complex problem-solving and creative construction with the help of planning and simulation tools.
+- Engagement is maintained through progressive unlocking of new technologies and challenges to take on with them, as well as visiting new strange and exotic places within the home star system as well as outside of it.
+
+### Visual and audio style
+
+- Stylized, cel-shaded or similar art style with vibrant colors and clear, distinct shapes.
+- Audio includes ambient music for celestial bodies, sound effects of construction, launching of vessels, and robotic chatter.
+
+### Game world fiction
+
+- Set in an alien galaxy with mutliple star systems available to visit, each with its unique set of planets and moons.
+- Players begin with basic technology on a small world (rocky moon, large asteroid...) to learn the basics of resource gathering, construction and spaceflight, and gradually advance through exploration of other celestial bodies to access new resources.
+- The narrative is driven by the player, with each new discovery and construction project contributing to their own overall story.
+
+### Monetization
+
+- Open-source project, possibility of accepting donations strictly to invest back into the project.
+
+### Platforms, technology, and scope
+
+- PC-only
+- Developed in Unity 6 with the DOTS framework, or in Unreal Engine 5, TBD
+- 3D game with procedural terrain and texturing elements
+- 2-body Keplerian orbital mechanics within spheres of influence
+- Origin rebasing scope based on selected engine, easier to manage in UE5
+- Data-oriented architecture
+- First playable demos within 12-18 months
+
+## Game systems design
+
+### Core loops
+
+- Players gather resources by mining, atmospheric scooping, orbital collection.
+- Gathered resources are used to create processing plants and factories, those can in turn produce more advanced resources and vessel parts.
+- A visual editor is used to put together spacecraft from various parts and then launch it, allowing players to start new bases on other celestial bodies.
+
+### Objectives and progression
+
+- Players start with very simple goals, such as building their first basic factories, mining some common resources and launching their first rockets.
+- Long-term goals include building stations on multiple celestial bodies, automating resource gathering and production, and achieving interstellar travel.
+- Challenge is introduced by the necessity to manage a station's needs, availability of resources - both local (e.g. by capping a resource field to a certain maximum amount available per time unit) and external (need to continuously ship vital resources to places where they aren't natively available).
+- Progression is gated by the player's ability to gather resources and ship them around various stations in order to be able to construct more and more advanced, powerful or efficient facilities and vessels.
+
+### Game systems
+
+- **Resource management**
+  - Gathering, storing, transporting and utilizing resources from various celestial bodies
+  - Necessity to provide various resources steadily to specific station facilities in order to keep them running smoothly
+  - Resource-rich spots limited by current stockpile and maximum rate of renewal
+  - Scanning for resources and their concentrations in various levels of detail:
+    - Telescope scanning of distant celestial bodies: list of resources
+    - Orbital scanning of surface: locations of specific resource-rich spots
+    - Aerial and ground scanning: specific concentrations of resources within a location
+- **Construction**
+  - Designing and building vessels by connecting various parts serving different functions
+  - Procedural parts such as fuel tanks, structural elements, fuselages
+  - Designing and building stations in a similar manner to vessels, but only available on the ground as stationary facilities
+  - Seamless interfacing between vessels and facilities that are within range of the same station
+- **Automation**
+  - Advanced facilities allowing the player to schedule transportation of specific resources from one station to another
+  - The player has to manually build the supply vehicle for the specific supply route, and pilot it at least once to successful completion
+  - Cost and timing of subsequent automated missions calculated based on the manually piloted mission
+- **Physics simulation**
+  - Vessels not made up of distinct physical rigid bodies matching the functional parts, instead a unified whole-vessel approach
+  - No simulation of mechanical stress
+  - Aerodynamic forces based on overall shape of the vehicle rather than a sum of its parts
+  - Simplified thermal simulation
+
+### Interactivity
+
+- Moment-by-moment gameplay including designing parts, building facilities, launching and flying missions, and managing stations
+- A real-world inspired physics sandbox with simplifications for the sake of reducing unnecessary complexity and increased predictability
+- Players navigate the world through intuitive UIs:
+  - vessel and station construction editors, complete with various mission planning tools
+  - a coherent flight HUD with most important information neatly concentrated in a single focus area
+  - a 3D map view with the scope from viewing a single celestial body from a distance to viewing the entire galaxy and all the available star systems, presenting relevant information at each level
+  - a station management UI with high-level overview of performance and issues, as well as detailed reports from various facilities and areas of the simulation
