@@ -6,7 +6,7 @@ To battle the inprecision of floats, the game will utilise 4 coordinate systems 
 This is the coordinate system in which rendering and local physics happen. It is centered on the camera, and the unit is meters.
 
 ### Planetspace
-This is the coordinate system in which the precise position of a ship is calculated. It is centered on the gravitationally most significant planet, and the unit is kilometers, or a unit of $10^i$ kilometers, where $i \in \N$. Each spacecraft is one object.
+This is the coordinate system in which the precise position of a ship is calculated. It is centered on the gravitationally most significant planet, and the unit is kilometers, or a unit of $10^i$ kilometers, where $i \in \mathbb{N}$. Each spacecraft is one object.
 
 ### Starspace
 This is the coordinate system representing the position in the star system. It is centered on the star, and the unit is AU. Each planet system is one object.
