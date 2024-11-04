@@ -1,7 +1,7 @@
 # Coordinate Systems Specification
-To battle the inprecision of floats, the game will utilise 4 coordinate systems for physics.
+To battle the imprecision of floats, the game will utilise 4 coordinate systems for physics.
 
-## Coordinate system overview
+## Coordinate systems overview
 ### Renderspace
 This is the coordinate system in which rendering and local physics happen. It is centered on the camera, and the unit is meters.
 
@@ -14,8 +14,8 @@ This is the coordinate system representing the position in the star system. It i
 ### Galaxyspace
 This is the coordinate system representing the position in the galaxy. It is centered on the center of the galaxy, and the unit is parsec. Each star system is one object.
 
-### Spacecraft behavior
-The spacecraft is calculated in either planetspace, starspace, or galaxyspace, depending on what is the most gravitationally significant body at the moment.
+## Spacecraft behavior
+The spacecraft's position is calculated in either planetspace, starspace, or galaxyspace, depending on what is the most gravitationally significant body at the moment.
 
 ## The maths
 ### Rendering
@@ -25,24 +25,24 @@ Rendering the ship is straightforward, however not so much for the celestial bod
 
 For bodies above a certain visual size, this rendering rule does not apply anymore, and they are instead rendered as close-up.
 
-### Calculations
-Calculations should happen "locally", in the most detail suitable. Let's list a few cases that might arise, as an example:
+### Physics
+Calculations shall happen "locally", in the most detail suitable. Let's list a few cases that might arise, as an example:
 
 1. A spacecraft is in a low orbit around Earth.
 
-In this case, the spacecraft would be calculated as an object in Earth's planetspace, but wouldn't be distinguishable from Earth itself in starspace.
+In this case, the spacecraft will be calculated as an object in Earth's planetspace, but won't be distinguishable from Earth itself in starspace.
 
 2. A spacecraft is on the surface of the Moon.
 
-In this case, the spacecraft would still be calculated in planetspace, however, depending on the implementation, said planetspace may not be of the Earth, but of the Moon (see [implementation considerations](#implementation-considerations))
+In this case, the spacecraft will still be calculated in planetspace, however, depending on the implementation, said planetspace may not be of the Earth, but of the Moon (see [implementation considerations](#implementation-considerations))
 
 3. A spacecraft is in interplanetary space around the Sun.
 
-In this case, the spacecraft is treated as a planet, being calculated in starspace.
+In this case, the spacecraft will be treated as a planet, being calculated in starspace.
 
 4. A colonial ship is in interstellar space.
 
-In this case, the ship is treated as a star, being simulated in galaxyspace.
+In this case, the ship will be treated as a star, being simulated in galaxyspace.
 
 ## Implementation considerations
 ### Nested planetspaces
