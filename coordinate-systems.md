@@ -18,7 +18,7 @@ This is the coordinate system representing the position in the star system. It i
 It is a system of cartesian coordinates, where the star's north pole is up, and one coordinate is a tangent to the star's orbit.
 
 ### Galaxyspace
-This is the coordinate system representing the position in the galaxy. It is centered on the center of the galaxy, and the unit is $2^43$ kilometers ($4\cdot1024^4$). Each star system is one object.
+This is the coordinate system representing the position in the galaxy. It is centered on the center of the galaxy, and the unit is $2^{43}$ kilometers ($4\cdot1024^4$). Each star system is one object.
 
 It is a system of cartesian coordinates, where the up coordinate is normal to the galactic plane.
 
