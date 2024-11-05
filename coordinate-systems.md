@@ -8,17 +8,17 @@ This is the coordinate system in which rendering and local physics happen. It is
 It is a system of cartesian coordinates, where the camera's viewport sets the x and y coordinates, with z being the depth.
 
 ### Planetspace
-This is the coordinate system in which the precise position of a ship is calculated. It is centered on the gravitationally most significant planet, and the unit is kilometers, or a unit of $10^i$ kilometers, where $i \in \mathbb{N}$. Each spacecraft is one object.
+This is the coordinate system in which the precise position of a ship is calculated. It is centered on the gravitationally most significant planet, and the unit is kilometers, or a unit of $2^i$ kilometers, where $i \in \mathbb{N}$. Each spacecraft is one object.
 
 It is a system of cartesian coordinates, where the planet's north pole is up, and one coordinate is a tangent to the planet's orbit.
 
 ### Starspace
-This is the coordinate system representing the position in the star system. It is centered on the star, and the unit is AU. Each planet system is one object.
+This is the coordinate system representing the position in the star system. It is centered on the star, and the unit is $2^{27}$ kilometers ($128\cdot1024\cdot1024$). Each planet system is one object.
 
 It is a system of cartesian coordinates, where the star's north pole is up, and one coordinate is a tangent to the star's orbit.
 
 ### Galaxyspace
-This is the coordinate system representing the position in the galaxy. It is centered on the center of the galaxy, and the unit is parsec. Each star system is one object.
+This is the coordinate system representing the position in the galaxy. It is centered on the center of the galaxy, and the unit is $2^43$ kilometers ($4\cdot1024^4$). Each star system is one object.
 
 It is a system of cartesian coordinates, where the up coordinate is normal to the galactic plane.
 
