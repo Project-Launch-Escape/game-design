@@ -8,7 +8,7 @@ This is the coordinate system in which rendering and local physics happen. It is
 It is a system of cartesian coordinates, where the camera's viewport sets the x and y coordinates, with z being the depth.
 
 ### Planetspace
-This is the coordinate system in which the precise position of a ship is calculated. It is centered on the gravitationally most significant planet, and the unit is $2^{10}$ meters, or a unit of $2^i$ kilometers, where $i \in \mathbb{N}$. Each spacecraft is one object.
+This is the coordinate system in which the precise position of a ship is calculated. It is centered on the gravitationally most significant planet, and the unit is $2^{10}$ meters, or a unit of $2^i$ meters, where $i \in \mathbb{N}$. Each spacecraft is one object.
 
 It is a system of cartesian coordinates, where the planet's north pole is up, and one coordinate is a tangent to the planet's orbit.
 
